@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = [".."]
+include = ["markdown_taker", "markdown_taker.*"]
+
+[project]
+name = "markdown-taker"
+version = "0.1.0"
+description = "A lightweight split-pane TUI markdown editor"
+requires-python = ">=3.10"
+dependencies = [
+    "textual",
+]
+
+[project.scripts]
+markdown = "markdown_taker.__main__:main"
+mark = "markdown_taker.__main__:main"
